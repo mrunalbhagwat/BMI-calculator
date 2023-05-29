@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Dancing+Script&display=swap" rel="stylesheet"> 
+</head>
+<style>
+    body{
+      background-color: aliceblue;
+    }
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: min-content;
+        justify-content: center;
+        color: rgb(251, 253, 115);
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 10px 0 10px 0px rgba(94, 82, 82, 0.2);
+        margin: 100px auto;
+        margin-bottom: 0px;
+        flex-wrap: wrap;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+ 
+    #heading{
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: bolder;
+    }
+
+    .form {
+        margin: 40px auto 0 auto;
+    }
+ 
+    .input-value {
+        display: flex;
+        flex-direction: row;
+        font-size: larger;
+        justify-content: center;
+    }
+    
+    #grad{
+      background-image: linear-gradient(to bottom right,#000000 0%, #e9dcdc 100%);
+    }
+
+    #height,
+    #weight {
+        width: 400px;
+    }
+ 
+    #weight-unit,
+    #height-unit {
+        width: fit-content;
+    }
+ 
+    .input-value * {
+        margin: 0 5px;
+    }
+    #btnArea{
+        margin: 0 0 0 860px;
+        padding: 0px;
+        background-color: #b2b9b9;
+        color: #f7d3d3;
+        border: none;
+        cursor: pointer;
+        font-family: montserrat;
+        font-weight: 900;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+</style>
+ 
+<body>
+    <div class="calculator" id="grad">
+        <h1 class="text-center" id="heading">BMI Calculator</h1>
+        <div class="form" >
+          <div class="text-center" id="content">
+            <h1 class="bmi"></h1>
+            <h2 class="remark"></h2>
+          </div>
+            <div class="mb-3">
+                <label class="form-label">
+                    Height:
+                    <div class="input-value">
+                        <input id="height" class="form-range" type="range" value="1" min="1" max="300" />
+                        <span id="height-value">0</span>
+                        <!-- Select Height unit -->
+                        <select id="height-unit" class="form-select">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="in">in</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </label class="form-label">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">
+                    Weight:
+                    <div class="input-value">
+                        <input id="weight" class="form-range" type="range" value="1" min="1" max="300" />
+                        <span id="weight-value">0</span>
+                        <!-- Select Weight unit -->
+                        <select id="weight-unit" class="form-select">
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="lbs">lbs</option>
+                            <option value="oz">oz</option>
+                        </select>
+                    </div>
+                </label>
+            </div>
+           
+        </div>
+    </div> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <!-- link js from index.js -->
+        <script src="./main.js"></script>
+ 
+</body>
+ 
+</html>
